@@ -29,6 +29,18 @@ namespace B2C_Billers_Csharp.src
             return JsonConvert.DeserializeObject<CategoryResponse>(msg);
         }
 
+        public PaymentItemResponse getBillerPaymentItems(string billerId)
+        {
+            Dictionary<string, string> extra = new Dictionary<string, string>();
+            Dictionary<string, string> response = interswitch.Send(Constants.GET_CATEGORY_BILLERS_PAYMENTITEMS_PREFIX + billerId + Constants.GET_CATEGORY_BILLERS_PAYMENTITEMS_SUFFIX, Constants.GET);
+            string responseCode;
+            response.TryGetValue(Interswitch.Interswitch.HTTP_CODE, out responseCode);
+                string msg;
+            response.TryGetValue(Interswitch.Interswitch.HTTP_RESPONSE, out msg);
+
+            return JsonConvert.DeserializeObject<PaymentItemResponse>(msg);
+        }
+
         public BillerResponse getCategoryBillers(string id)
         {
             
