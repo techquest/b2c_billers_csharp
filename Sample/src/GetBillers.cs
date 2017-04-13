@@ -5,7 +5,7 @@ namespace Sample
     public class GetBillers : BaseSample
     {
 
-        static void Mainn(string[] args)
+        static void Main(string[] args)
         {
             BillerResponse billers = billPayment.getBillers();
             if (billers != null)

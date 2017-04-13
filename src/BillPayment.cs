@@ -33,6 +33,30 @@ namespace B2C_Billers_Csharp.src
 
         }
 
+        public ValidateCustomerResponse validateCustomer(string paymentCode, string customerId)
+        {
+            ValidateCustomerRequest request = new ValidateCustomerRequest();
+            Customer customer = new dto.Customer();
+            customer.customerId = customerId;
+            customer.paymentCode = paymentCode;
+            Customer[] customerArray = new Customer[1];
+            customerArray[0] = customer;
+
+            request.customers = customerArray;
+
+
+            Dictionary<string, string> response = interswitch.Send(Constants.CUSTOMER_VALIDATION_RESOURCE_URL, Constants.POST, request);
+            String responseCode;
+            response.TryGetValue(Interswitch.Interswitch.HTTP_CODE, out responseCode);
+            String msg;
+            response.TryGetValue(Interswitch.Interswitch.HTTP_RESPONSE, out msg);
+
+            return JsonConvert.DeserializeObject<ValidateCustomerResponse>(msg);
+
+
+
+        }
+
         public PaymentResponse makePayment(string amount, string customerId, string paymentCode)
         {
 

@@ -9,7 +9,7 @@ namespace Sample.src
 {
     public class GetPaymentItems : BaseSample
     {
-        static void Mainn(string[] args)
+        static void Main(string[] args)
         {
 
             BillerResponse billers = billPayment.getBillers();
