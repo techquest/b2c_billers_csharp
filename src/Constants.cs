@@ -8,7 +8,7 @@ namespace B2C_Billers_Csharp
 {
     public class Constants
     {
-        public static string GET_CATEGORY_URL = "api/v2/quickteller/categorys";
+        public static string GET_CATEGORY_URL = "/api/v2/quickteller/categorys";
         public static string GET = "GET";
         public static string GET_BILLERS_URL = "/api/v2/quickteller/billers";
         public static string GET_CATEGORY_BILLERS_PAYMENTITEMS_PREFIX = "api/v2/quickteller/billers/";

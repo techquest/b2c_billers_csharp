@@ -17,6 +17,18 @@ namespace B2C_Billers_Csharp.src
             interswitch = new Interswitch.Interswitch(clientId, clientSecret, env);
         }
 
+        public CategoryResponse getCategorys()
+        {
+            Dictionary<string, string> extra = new Dictionary<string, string>();
+            Dictionary<string, string> response = interswitch.Send(Constants.GET_CATEGORY_URL, Constants.GET);
+            string responseCode;
+            response.TryGetValue(Interswitch.Interswitch.HTTP_CODE, out responseCode);
+            string msg;
+            response.TryGetValue(Interswitch.Interswitch.HTTP_RESPONSE, out msg);
+
+            return JsonConvert.DeserializeObject<CategoryResponse>(msg);
+        }
+
 
         //method definitions go here
         public BillerResponse getBillers() {

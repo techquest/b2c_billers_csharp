@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sample
+namespace B2C_Billers_Csharp.dto
 {
-    class Program
+    public class CategoryResponse
     {
-        
+        public Category[] categorys { set; get; }
     }
 }

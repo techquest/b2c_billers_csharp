@@ -71,10 +71,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseSample.cs" />
-    <Compile Include="GetBillers.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="src\BaseSample.cs" />
+    <Compile Include="src\GetBillers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\GetCategory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

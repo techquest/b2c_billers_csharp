@@ -64,8 +64,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Constants.cs" />
+    <Compile Include="dto\Category.cs" />
+    <Compile Include="dto\CategoryResponse.cs" />
+    <Compile Include="src\Constants.cs" />
     <Compile Include="dto\Biller.cs" />
     <Compile Include="dto\BillerResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
