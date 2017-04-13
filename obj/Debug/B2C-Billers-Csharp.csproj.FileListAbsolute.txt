@@ -12,3 +12,4 @@ C:\Users\ugochukwu.okeke\dev\B2C-Billers-Csharp\bin\Debug\Microsoft.Threading.Ta
 C:\Users\ugochukwu.okeke\dev\B2C-Billers-Csharp\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
 C:\Users\ugochukwu.okeke\dev\B2C-Billers-Csharp\bin\Debug\Microsoft.Threading.Tasks.xml
 C:\Users\ugochukwu.okeke\dev\B2C-Billers-Csharp\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\ugochukwu.okeke\dev\B2C-Billers-Csharp\obj\Debug\B2C-Billers-Csharp.csprojResolveAssemblyReference.cache

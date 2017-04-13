@@ -74,6 +74,7 @@
     <Compile Include="src\BaseSample.cs" />
     <Compile Include="src\GetBillers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\GetBillersInCategory.cs" />
     <Compile Include="src\GetCategory.cs" />
   </ItemGroup>
   <ItemGroup>

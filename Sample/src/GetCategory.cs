@@ -9,7 +9,7 @@ namespace Sample.src
 {
     public class GetCategory : BaseSample
     {
-        static void Main(string[] args)
+        static void Mainn(string[] args)
         {
             CategoryResponse response = billPayment.getCategorys();
             if (response != null) {
