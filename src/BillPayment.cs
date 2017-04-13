@@ -17,6 +17,22 @@ namespace B2C_Billers_Csharp.src
             interswitch = new Interswitch.Interswitch(clientId, clientSecret, env);
         }
 
+        public TransactionInquiryResponse transactionInquiry(string paymentCode, string customerId)
+        {
+            TransactionInquiryRequest inquiryRequest = new TransactionInquiryRequest();
+            inquiryRequest.paymentCode = paymentCode;
+            inquiryRequest.customerId = customerId;
+
+            Dictionary<string, string> response = interswitch.Send(Constants.TRANSACTION_INQUIRY_RESOURCE_URL, Constants.POST, inquiryRequest);
+            String responseCode;
+            response.TryGetValue(Interswitch.Interswitch.HTTP_CODE, out responseCode);
+            String msg;
+            response.TryGetValue(Interswitch.Interswitch.HTTP_RESPONSE, out msg);
+
+            return JsonConvert.DeserializeObject<TransactionInquiryResponse>(msg);
+
+        }
+
         public PaymentResponse makePayment(string amount, string customerId, string paymentCode)
         {
 

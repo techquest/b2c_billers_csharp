@@ -76,6 +76,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\GetBillersInCategory.cs" />
     <Compile Include="src\GetCategory.cs" />
+    <Compile Include="src\GetPaymentItems.cs" />
+    <Compile Include="src\MakePayment.cs" />
+    <Compile Include="src\MakeTransactionInquiry.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

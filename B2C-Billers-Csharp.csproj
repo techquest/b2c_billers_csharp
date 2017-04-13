@@ -66,6 +66,12 @@
   <ItemGroup>
     <Compile Include="dto\Category.cs" />
     <Compile Include="dto\CategoryResponse.cs" />
+    <Compile Include="dto\Payment.cs" />
+    <Compile Include="dto\PaymentItemResponse.cs" />
+    <Compile Include="dto\PaymentItems.cs" />
+    <Compile Include="dto\PaymentResponse.cs" />
+    <Compile Include="dto\TransactionInquiryRequest.cs" />
+    <Compile Include="dto\TransactionInquiryResponse.cs" />
     <Compile Include="src\Constants.cs" />
     <Compile Include="dto\Biller.cs" />
     <Compile Include="dto\BillerResponse.cs" />
