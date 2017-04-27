@@ -9,7 +9,7 @@ namespace Sample.src
 {
     public class ValidateCustomer : BaseSample
     {
-        static void Main(string[] args)
+        static void Mainn(string[] args)
         {
             /**
          * Check GetPaymentItems.java inside the sample folder 

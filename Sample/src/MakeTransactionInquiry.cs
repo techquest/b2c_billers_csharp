@@ -9,7 +9,7 @@ namespace Sample.src
 {
     public class MakeTransactionInquiry : BaseSample
     {
-        static void Main(string[] args)
+        static void Mainn(string[] args)
         {
             string paymentCode = "40201";
 

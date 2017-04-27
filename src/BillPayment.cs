@@ -57,15 +57,28 @@ namespace B2C_Billers_Csharp.src
 
         }
 
-        public PaymentResponse makePayment(string amount, string customerId, string paymentCode)
+        public TransactionStatusResponse getTransactionStatus(string requestRef)
+        {
+            Dictionary<string, string> extra = new Dictionary<string, string>();
+            extra.Add("requestReference", requestRef);
+            Dictionary<string, string> response = interswitch.Send(Constants.GET_TRANSACTION_STATUS_URL, Constants.GET, null, extra);
+            string responseCode;
+            response.TryGetValue(Interswitch.Interswitch.HTTP_CODE, out responseCode);
+            string msg;
+            response.TryGetValue(Interswitch.Interswitch.HTTP_RESPONSE, out msg);
+            return JsonConvert.DeserializeObject<TransactionStatusResponse>(msg);
+        }
+
+        public PaymentResponse makePayment(string amount, string customerId, string paymentCode, string requestRef)
         {
 
             Payment payment = new dto.Payment();
             payment.amount = amount;
             payment.customerId = customerId;
             payment.paymentCode = paymentCode;
+            payment.requestReference = requestRef;
             
-            Dictionary<string, string> response = interswitch.Send(Constants.PAYMENT_INQUIRY_RESOURCE_URL, Constants.POST, payment);
+            Dictionary<string, string> response = interswitch.Send(Constants.MAKE_PAYMENT_RESOURCE_URL, Constants.POST, payment);
             String responseCode;
             response.TryGetValue(Interswitch.Interswitch.HTTP_CODE, out responseCode);
             String msg;

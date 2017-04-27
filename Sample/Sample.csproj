@@ -79,6 +79,7 @@
     <Compile Include="src\GetPaymentItems.cs" />
     <Compile Include="src\MakePayment.cs" />
     <Compile Include="src\MakeTransactionInquiry.cs" />
+    <Compile Include="src\TransactionStatus.cs" />
     <Compile Include="src\ValidateCustomer.cs" />
   </ItemGroup>
   <ItemGroup>

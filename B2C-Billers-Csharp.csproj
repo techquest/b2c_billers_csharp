@@ -71,8 +71,11 @@
     <Compile Include="dto\PaymentItemResponse.cs" />
     <Compile Include="dto\PaymentItems.cs" />
     <Compile Include="dto\PaymentResponse.cs" />
+    <Compile Include="dto\Recharge.cs" />
+    <Compile Include="dto\StatusError.cs" />
     <Compile Include="dto\TransactionInquiryRequest.cs" />
     <Compile Include="dto\TransactionInquiryResponse.cs" />
+    <Compile Include="dto\TransactionStatusResponse.cs" />
     <Compile Include="dto\ValidateCustomerRequest.cs" />
     <Compile Include="dto\ValidateCustomerResponse.cs" />
     <Compile Include="src\Constants.cs" />

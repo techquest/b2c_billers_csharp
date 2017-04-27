@@ -9,7 +9,7 @@ namespace Sample.src
 {
     public class MakePayment : BaseSample
     {
-        static void Main(string[] args)
+        static void Mainn(string[] args)
         {
             string paymentCode = "40201";
 
@@ -17,7 +17,25 @@ namespace Sample.src
 
             string amount = "500"; // amount is in minor format.
 
-            PaymentResponse response = billPayment.makePayment(amount, customerId, paymentCode);
+            /**
+            * The referencePrefix is a unique 4-sequence code for each Biller
+            * You can get your own when you are set up as a merchant on our platform
+            * It is not mandatory to have one
+            * We strongly advice you get one because it will reduce the chances of reference collisions.
+            * 
+            * In the example below, we will be using "test" as out referencePrefix
+            */
+            String referencePrefix = "test"; //
+
+            Random r = new Random();
+
+            var x = r.Next(0, 1000000);
+
+            String requestRef = x.ToString();
+
+            requestRef = referencePrefix + requestRef;
+
+            PaymentResponse response = billPayment.makePayment(amount, customerId, paymentCode, requestRef);
 
             if (response != null) {
 

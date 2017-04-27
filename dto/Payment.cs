@@ -16,5 +16,6 @@ namespace B2C_Billers_Csharp.dto
         public string transactionRef { set; get; }
         public string surcharge { set; get; }
         public string paymentCode { set; get; }
+        public string requestReference { set; get; }
     }
 }
