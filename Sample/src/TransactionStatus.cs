@@ -20,7 +20,7 @@ namespace Sample.src
              */
 
 
-            string paymentCode = "40201";
+            string paymentCode = "90101"; //paymentCode for test="40201", paymentCode for sandbox=90101
 
             string customerId = "07030241757";
 
@@ -34,7 +34,7 @@ namespace Sample.src
             * 
             * In the example below, we will be using "test" as out referencePrefix
             */
-            String referencePrefix = "test"; //
+            String referencePrefix = "1456"; //prefix for test environment, use test
 
             Random r = new Random();
 

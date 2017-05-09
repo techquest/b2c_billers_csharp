@@ -17,7 +17,7 @@ namespace Sample.src
             {
                 Biller[] billerArray = billers.billers;
 
-                Biller firstBiller = billerArray[0];
+                Biller firstBiller = billerArray[2];
 
                 String billerId = firstBiller.billerid;
 

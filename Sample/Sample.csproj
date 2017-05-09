@@ -71,6 +71,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\AllInOneSample.cs" />
     <Compile Include="src\BaseSample.cs" />
     <Compile Include="src\GetBillers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
